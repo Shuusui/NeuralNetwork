@@ -9,11 +9,12 @@
 #pragma region External Includes
 
 
+
 namespace NeuralNetwork
 {
 	namespace BaseFramework
 	{
-		class Question : public BaseFrameworkLib::ISentences
+		class Statement : BaseFrameworkLib::ISentences
 		{
 		public:
 

@@ -1,4 +1,5 @@
 #pragma once
+#pragma once
 ///Internal includes
 #pragma region Internal Includes
 #include "ISentences.h"
@@ -13,11 +14,11 @@ namespace NeuralNetwork
 {
 	namespace BaseFramework
 	{
-		class Question : public BaseFrameworkLib::ISentences
+		class Demand : public BaseFrameworkLib::ISentences
 		{
 		public:
 
-		private: 
+		private:
 
 		};
 	}

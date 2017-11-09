@@ -14,7 +14,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\include\public\IInput.h">
+    <ClInclude Include="source\include\public\ISentences.h">
       <Filter>Interfaces</Filter>
     </ClInclude>
   </ItemGroup>

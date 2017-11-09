@@ -13,9 +13,9 @@ namespace NeuralNetwork
 {
 	namespace BaseFramework
 	{
-		class Question : public BaseFrameworkLib::ISentences
+		class Optative : BaseFrameworkLib::ISentences
 		{
-		public:
+		public: 
 
 		private: 
 

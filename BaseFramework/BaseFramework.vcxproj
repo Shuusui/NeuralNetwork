@@ -153,10 +153,12 @@
     <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\include\private\Demand.h" />
     <ClInclude Include="source\include\private\InputHandler.h" />
     <ClInclude Include="source\include\private\InputManager.h" />
     <ClInclude Include="source\include\private\Question.h" />
     <ClInclude Include="source\include\private\RuntimeManager.h" />
+    <ClInclude Include="source\include\private\Statement.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

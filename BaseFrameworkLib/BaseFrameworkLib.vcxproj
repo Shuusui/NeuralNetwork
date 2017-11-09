@@ -30,7 +30,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\include\public\IInput.h" />
+    <ClInclude Include="source\include\public\ISentences.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9335b93d-02ef-4d7f-be2f-47ea53680590}</ProjectGuid>
