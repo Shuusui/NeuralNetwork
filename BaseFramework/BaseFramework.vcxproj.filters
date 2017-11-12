@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="source\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\include\private\InputHandler.h">
+      <Filter>Manager/Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\private\InputManager.h">
+      <Filter>Manager/Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\private\RuntimeManager.h">
+      <Filter>Manager/Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\private\Question.h">
+      <Filter>Inherits</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\private\Statement.h">
+      <Filter>Inherits</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\private\Demand.h">
+      <Filter>Inherits</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Manager/Handler">
+      <UniqueIdentifier>{d8e37b12-3b59-49b5-bc7e-1dc0bf002d2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inherits">
+      <UniqueIdentifier>{24f42852-bc1e-4500-8d07-bba7039f3904}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
