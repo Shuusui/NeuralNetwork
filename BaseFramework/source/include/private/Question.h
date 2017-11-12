@@ -6,7 +6,7 @@
 ///External includes
 #pragma region External Includes
 #include <string>
-#pragma region External Includes
+#pragma endregion External Includes
 
 
 namespace NeuralNetwork
@@ -16,9 +16,9 @@ namespace NeuralNetwork
 		class Question : public BaseFrameworkLib::ISentences
 		{
 		public:
-
+			Question(std::vector<std::string> currentQuestion);
+			~Question();
 		private: 
-
 		};
 	}
 }

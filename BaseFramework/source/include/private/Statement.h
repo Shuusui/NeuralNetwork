@@ -6,7 +6,7 @@
 ///External includes
 #pragma region External Includes
 #include <string>
-#pragma region External Includes
+#pragma endregion External Includes
 
 
 
@@ -17,9 +17,9 @@ namespace NeuralNetwork
 		class Statement : BaseFrameworkLib::ISentences
 		{
 		public:
-
+			Statement(std::vector<std::string> currentStatement);
+			~Statement();
 		private: 
-
 		};
 	}
 }

@@ -6,7 +6,8 @@
 ///External includes
 #pragma region External Includes
 #include <string>
-#pragma region External Includes
+#include <vector>
+#pragma endregion External Includes
 
 
 
@@ -16,10 +17,10 @@ namespace NeuralNetwork
 	{
 		class ISentences
 		{
-		public: 
-
-		private: 
-			std::string m_currentString; 
+		public: 			
+			virtual bool WriteDown(); 
+		protected: 
+			std::vector<std::string> m_currentString; 
 		};
 	}
 }

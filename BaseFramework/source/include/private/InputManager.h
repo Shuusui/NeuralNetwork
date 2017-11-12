@@ -2,12 +2,14 @@
 
 ///Internal includes
 #pragma region Internal Includes
-
+#include "InputHandler.h"
 #pragma endregion Internal Includes
 ///External includes
 #pragma region External Includes
 #include <string>
-#pragma region External Includes
+#include <vector>
+#include <iostream>
+#pragma endregion External Includes
 
 namespace NeuralNetwork
 {
@@ -17,9 +19,10 @@ namespace NeuralNetwork
 		{
 		public: 
 			InputManager();
+			void GetInput();
 			~InputManager();
 		private: 
-			
+			InputHandler* m_inputHandler; 
 		};
 
 

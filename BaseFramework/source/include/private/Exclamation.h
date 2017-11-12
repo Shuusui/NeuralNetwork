@@ -18,9 +18,9 @@ namespace NeuralNetwork
 		class Exclamation : public BaseFrameworkLib::ISentences
 		{
 		public: 
-			
+			Exclamation(std::vector<std::string> currentExclamation);			
+			~Exclamation();
 		private: 
-
 		};
 	}
 }
