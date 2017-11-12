@@ -1,24 +1,24 @@
 #pragma once
 ///Internal includes
 #pragma region Internal Includes
-#include "IInput.h"
+#include "ISentences.h"
 #pragma endregion Internal Includes
 ///External includes
 #pragma region External Includes
 #include <string>
-#pragma region External Includes
+#pragma endregion External Includes
 
 
 namespace NeuralNetwork
 {
 	namespace BaseFramework
 	{
-		class Question : public BaseFrameworkLib::IInput
+		class Question : public BaseFrameworkLib::ISentences
 		{
 		public:
-
+			Question(std::vector<std::string> currentQuestion);
+			~Question();
 		private: 
-
 		};
 	}
 }

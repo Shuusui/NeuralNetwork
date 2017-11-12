@@ -7,14 +7,20 @@
     <Filter Include="Source">
       <UniqueIdentifier>{5b53a1aa-9782-4438-806f-157b3c106ac3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Interface Sourcefiles">
+      <UniqueIdentifier>{75ce2591-2c87-4322-9f32-9ab62ab1fe1c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="source\ISentences.cpp">
+      <Filter>Interface Sourcefiles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\include\public\IInput.h">
+    <ClInclude Include="source\include\public\ISentences.h">
       <Filter>Interfaces</Filter>
     </ClInclude>
   </ItemGroup>
