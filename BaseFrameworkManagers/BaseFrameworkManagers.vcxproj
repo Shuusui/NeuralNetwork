@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -18,11 +18,23 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\include\public\InputHandler.h" />
+    <ClInclude Include="source\include\public\InputManager.h" />
+    <ClInclude Include="source\include\public\MemoryManager.h" />
+    <ClInclude Include="source\include\public\OutputManager.h" />
+    <ClInclude Include="source\include\public\RuntimeManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\InputHandler.cpp" />
+    <ClCompile Include="source\InputManager.cpp" />
+    <ClCompile Include="source\RuntimeManager.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{23232642-C987-4206-AB89-F9721334589B}</ProjectGuid>
-    <RootNamespace>BaseFramework</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectGuid>{B54349DC-068F-4484-BDE9-CA6BA4E12815}</ProjectGuid>
+    <RootNamespace>BaseFrameworkManagers</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -70,52 +82,34 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IntDir>$(SolutionDir)/intermediate/$(Platform)/$(Configuration)</IntDir>
-    <OutDir>$(SolutionDir)/bin/$(Platform)/$(Configuration)</OutDir>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)\intermediate\$(Platform)\$(Configutation)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IntDir>$(SolutionDir)/intermediate/$(Platform)/$(Configuration)</IntDir>
-    <OutDir>$(SolutionDir)/bin/$(Platform)/$(Configuration)</OutDir>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)\intermediate\$(Platform)\$(Configutation)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IntDir>$(SolutionDir)/intermediate/$(Platform)/$(Configuration)</IntDir>
-    <OutDir>$(SolutionDir)/bin/$(Platform)/$(Configuration)</OutDir>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)\intermediate\$(Platform)\$(Configutation)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IntDir>$(SolutionDir)/intermediate/$(Platform)/$(Configuration)</IntDir>
-    <OutDir>$(SolutionDir)/bin/$(Platform)/$(Configuration)</OutDir>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)\intermediate\$(Platform)\$(Configutation)</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\dependencies\Wordnet\src\include;$(SolutionDir)\BaseFrameworkLib\source\include\public;(%AdditionalDependencies)</AdditionalIncludeDirectories>
     </ClCompile>
-    <Link>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;BaseFrameworkLib.lib;wn.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)\dependencies\Wordnet\lib;$(SolutionDir)\bin\$(Platform)\$(Configuration)\BaseFrameworkLib</AdditionalLibraryDirectories>
-    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\BaseFrameworkLib\source\include\public;(%AdditionalDependencies)</AdditionalIncludeDirectories>
     </ClCompile>
-    <Link>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;BaseFrameworkLib.lib%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)\bin\$(Platform)\$(Configuration)\BaseFrameworkLib;</AdditionalLibraryDirectories>
-    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -124,13 +118,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\dependencies\Wordnet\src\include;$(SolutionDir)\BaseFrameworkLib\source\include\public;(%AdditionalDependencies)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;BaseFrameworkLib.lib;wn.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)\dependencies\Wordnet\lib;$(SolutionDir)\bin\$(Platform)\$(Configuration)\BaseFrameworkLib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -140,40 +131,12 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\BaseFrameworkLib\source\include\public;(%AdditionalDependencies)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;BaseFrameworkLib.lib%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)\bin\$(Platform)\$(Configuration)\BaseFrameworkLib;</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="source\Exclamation.cpp" />
-    <ClCompile Include="source\InputHandler.cpp" />
-    <ClCompile Include="source\InputManager.cpp" />
-    <ClCompile Include="source\main.cpp" />
-    <ClCompile Include="source\MemoryManager.cpp" />
-    <ClCompile Include="source\OutputManager.cpp" />
-    <ClCompile Include="source\Question.cpp" />
-    <ClCompile Include="source\RuntimeManager.cpp" />
-    <ClCompile Include="source\Statement.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="source\include\private\BasicStructs.h" />
-    <ClInclude Include="source\include\private\Demand.h" />
-    <ClInclude Include="source\include\private\Exclamation.h" />
-    <ClInclude Include="source\include\private\InputHandler.h" />
-    <ClInclude Include="source\include\private\InputManager.h" />
-    <ClInclude Include="source\include\private\MemoryManager.h" />
-    <ClInclude Include="source\include\private\Optative.h" />
-    <ClInclude Include="source\include\private\OutputManager.h" />
-    <ClInclude Include="source\include\private\Question.h" />
-    <ClInclude Include="source\include\private\RuntimeManager.h" />
-    <ClInclude Include="source\include\private\Statement.h" />
-    <ClInclude Include="source\include\public\BasicEnums.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
