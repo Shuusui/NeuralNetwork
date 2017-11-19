@@ -6,6 +6,7 @@
 #include "Question.h"
 #include "Statement.h"
 #include "Exclamation.h"
+#include "ISentences.h"
 #pragma endregion Internal Includes
 ///External includes
 #pragma region External Includes
@@ -22,13 +23,11 @@ namespace NeuralNetwork
 		public: 
 			InputHandler();
 			bool ReadIn(std::string currentString); 
-
 			~InputHandler();
 		private: 
+			NeuralNetwork::BaseFrameworkLib::ISentences* CategorizeSentence(std::vector<std::string> currentString);
 			std::vector<std::string> m_stringBuffer;
-			Demand* m_demand;
-			Question* m_question;
-			Exclamation* m_exclamation;
+
 		};
 
 

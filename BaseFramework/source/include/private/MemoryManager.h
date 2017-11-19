@@ -18,7 +18,7 @@ namespace NeuralNetwork
 		{
 		public:
 			MemoryManager(); 
-			bool GetSentence(std::vector<std::string> currentSentence, enum NeuralNetwork::BaseFrameworkLib::Sentences sentenceType);
+			bool SetSentence(std::vector<std::string> currentSentence, enum NeuralNetwork::BaseFrameworkLib::Sentences sentenceType);
 			~MemoryManager();
 		private: 
 		};

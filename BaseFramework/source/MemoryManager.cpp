@@ -7,7 +7,7 @@ MemoryManager::MemoryManager()
 
 }
 
-bool MemoryManager::GetSentence(std::vector<std::string> currentSentence, enum NeuralNetwork::BaseFrameworkLib::Sentences sentenceType)
+bool MemoryManager::SetSentence(std::vector<std::string> currentSentence, enum NeuralNetwork::BaseFrameworkLib::Sentences sentenceType)
 {
 	switch (sentenceType)
 	{
@@ -32,7 +32,7 @@ bool MemoryManager::GetSentence(std::vector<std::string> currentSentence, enum N
 
 		break;
 	}
-	return true; 
+	return false; 
 }
 
 

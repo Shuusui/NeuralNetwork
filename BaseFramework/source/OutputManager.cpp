@@ -3,7 +3,8 @@
 using namespace NeuralNetwork::BaseFramework;
 
 
-OutputManager::OutputManager()
+OutputManager::OutputManager(BaseMemory memoryFrag)
+	:m_currMem(memoryFrag)
 {
 
 }

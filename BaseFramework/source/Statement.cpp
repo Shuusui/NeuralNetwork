@@ -12,7 +12,7 @@ Statement::Statement(std::vector<std::string> currentStatement)
 
 bool Statement::SaveSentence()
 {
-	m_memMng->GetSentence(m_currentString, this->GetEnum()); 
+	m_memMng->SetSentence(m_currentString, this->GetEnum()); 
 	return true; 
 }
 
@@ -23,5 +23,5 @@ NeuralNetwork::BaseFrameworkLib::Sentences Statement::GetEnum()
 
 Statement::~Statement()
 {
-
+	delete m_memMng;
 }

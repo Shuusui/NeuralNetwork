@@ -2,6 +2,7 @@
 ///Internal includes
 #pragma region Internal Includes
 #include "ISentences.h"
+#include "BasicEnums.h"
 #pragma endregion Internal Includes
 ///External includes
 #pragma region External Includes
@@ -15,8 +16,9 @@ namespace NeuralNetwork
 	{
 		struct BaseMemory
 		{
-			std::vector<std::string> m_stringFragment;
-			 
+			bool m_isFilled; 
+			enum Sentences m_sentenceType; 
+			std::string m_keyword; 
 		};
 
 

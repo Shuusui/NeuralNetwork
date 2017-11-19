@@ -3,6 +3,7 @@
 ///Internal includes
 #pragma region Internal Includes
 #include "InputHandler.h"
+#include "BasicStructs.h"
 #pragma endregion Internal Includes
 ///External includes
 #pragma region External Includes
@@ -19,7 +20,7 @@ namespace NeuralNetwork
 		{
 		public: 
 			InputManager();
-			void GetInput();
+			BaseMemory SetInput();
 			~InputManager();
 		private: 
 			InputHandler* m_inputHandler; 
