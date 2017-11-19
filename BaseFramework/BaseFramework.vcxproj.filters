@@ -37,9 +37,6 @@
     <ClInclude Include="source\include\private\Demand.h">
       <Filter>Inherit Headerfiles</Filter>
     </ClInclude>
-    <ClInclude Include="source\include\private\BasicStructs.h">
-      <Filter>BaseFiles</Filter>
-    </ClInclude>
     <ClInclude Include="source\include\private\Optative.h">
       <Filter>Inherit Headerfiles</Filter>
     </ClInclude>
@@ -61,14 +58,8 @@
     <ClInclude Include="source\include\private\MemoryManager.h">
       <Filter>Manager/Handler Headerfiles</Filter>
     </ClInclude>
-    <ClInclude Include="source\include\public\BasicEnums.h">
-      <Filter>BaseFiles</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="BaseFiles">
-      <UniqueIdentifier>{72ad9e46-2624-41f8-917c-1e1c1c8e1f5c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Inherit Headerfiles">
       <UniqueIdentifier>{24f42852-bc1e-4500-8d07-bba7039f3904}</UniqueIdentifier>
     </Filter>

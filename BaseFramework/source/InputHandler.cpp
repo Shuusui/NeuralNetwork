@@ -10,21 +10,21 @@ InputHandler::InputHandler()
 bool InputHandler::ReadIn(std::string currentString)
 {
 	m_stringBuffer.push_back(currentString);
-	if (currentString[currentString.size()] == '?')
+
+	if (currentString[currentString.size()] == '?' || currentString[currentString.size()] == '!' || currentString[currentString.size()] == '.')
 	{
-		m_question = new Question(m_stringBuffer);
-		m_question->SaveSentence();
-	}
-	else if (currentString[currentString.size()] == '!')
-	{
-		m_exclamation = new Exclamation(m_stringBuffer); 
-		m_exclamation->SaveSentence();
-	}
-	else
-	{
+		NeuralNetwork::BaseFrameworkLib::ISentences* currentSentence = CategorizeSentence(m_stringBuffer);
+		return currentSentence->SaveSentence() ?  true :  false;
 		
 	}
-	return true;
+	else
+		return false; 
+}
+
+NeuralNetwork::BaseFrameworkLib::ISentences* InputHandler::CategorizeSentence(std::vector<std::string> currentString)
+{
+	NeuralNetwork::BaseFrameworkLib::ISentences* sentence = new NeuralNetwork::BaseFramework::Question(currentString);
+	return sentence;
 }
 
 InputHandler::~InputHandler()

@@ -11,7 +11,7 @@ Question::Question(std::vector<std::string> currentQuestion)
 
 bool Question::SaveSentence()
 {
-	m_memMng->GetSentence(m_currentString, this->GetEnum()); 
+	m_memMng->SetSentence(m_currentString, this->GetEnum()); 
 	return true; 
 }
 

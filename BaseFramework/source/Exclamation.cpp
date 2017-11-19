@@ -12,7 +12,7 @@ Exclamation::Exclamation(std::vector<std::string> currentExclamation)
 
 bool Exclamation::SaveSentence()
 {
-	m_memMng->GetSentence(m_currentString, this->GetEnum());
+	m_memMng->SetSentence(m_currentString, this->GetEnum());
 	return true; 
 }
 
@@ -24,5 +24,5 @@ NeuralNetwork::BaseFrameworkLib::Sentences Exclamation::GetEnum()
 
 Exclamation::~Exclamation()
 {
-
+	delete m_memMng;
 }

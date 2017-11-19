@@ -15,7 +15,11 @@ void RuntimeManager::Run()
 {
 	while (true)
 	{
-		m_inputMgr->GetInput();
+		BaseMemory currMem = m_inputMgr->SetInput();
+		if (currMem.m_isFilled)
+			m_outputMgr = new OutputManager(currMem);
+		else
+			printf("Please repeat");
 	}
 }
 
@@ -26,5 +30,6 @@ void RuntimeManager::Finish()
 
 RuntimeManager::~RuntimeManager()
 {
-
+	delete m_inputMgr; 
+	delete m_outputMgr;
 }

@@ -7,15 +7,17 @@ InputManager::InputManager()
 	m_inputHandler = new InputHandler();
 }
 
-void InputManager::GetInput()
+BaseMemory InputManager::SetInput()
 {
 	std::string tempStr;
 	std::cin >> tempStr; 
 	m_inputHandler->ReadIn(tempStr);
+	BaseMemory base; 
+	return base; 
 }
 
 
 InputManager::~InputManager()
 {
-
+	delete m_inputHandler;
 }
