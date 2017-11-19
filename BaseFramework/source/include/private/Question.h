@@ -2,6 +2,7 @@
 ///Internal includes
 #pragma region Internal Includes
 #include "ISentences.h"
+#include "MemoryManager.h"
 #pragma endregion Internal Includes
 ///External includes
 #pragma region External Includes
@@ -17,8 +18,11 @@ namespace NeuralNetwork
 		{
 		public:
 			Question(std::vector<std::string> currentQuestion);
+			virtual bool SaveSentence() final;
+			virtual enum NeuralNetwork::BaseFrameworkLib::Sentences GetEnum() final; 
 			~Question();
 		private: 
+			MemoryManager* m_memMng;
 		};
 	}
 }

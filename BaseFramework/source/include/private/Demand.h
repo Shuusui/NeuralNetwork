@@ -18,8 +18,8 @@ namespace NeuralNetwork
 		class Demand : public BaseFrameworkLib::ISentences
 		{
 		public:
-			Demand(); 
-			~Demand();
+			virtual bool SaveSentence() final; 
+			virtual ~Demand();
 		private:
 		};
 	}

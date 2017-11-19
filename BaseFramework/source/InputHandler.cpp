@@ -13,12 +13,12 @@ bool InputHandler::ReadIn(std::string currentString)
 	if (currentString[currentString.size()] == '?')
 	{
 		m_question = new Question(m_stringBuffer);
-		//m_question->WriteDown();
+		m_question->SaveSentence();
 	}
 	else if (currentString[currentString.size()] == '!')
 	{
 		m_exclamation = new Exclamation(m_stringBuffer); 
-		//m_exclamation->WriteDown();
+		m_exclamation->SaveSentence();
 	}
 	else
 	{

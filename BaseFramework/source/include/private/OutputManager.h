@@ -5,7 +5,7 @@
 #pragma endregion Internal Includes
 ///External includes
 #pragma region External Includes
-#include <cstring>
+#include <string>
 #pragma region External Includes
 
 namespace NeuralNetwork

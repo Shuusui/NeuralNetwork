@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Manager/Handler Headerfiles">
+      <UniqueIdentifier>{6beb8c77-8cce-48cf-b0b8-90dbb6e39bf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager/Handler Sourcefiles">
+      <UniqueIdentifier>{3bd2e06b-ea09-4b9e-ab77-0a95c1e735bb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\include\public\InputHandler.h">
+      <Filter>Manager/Handler Headerfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\public\InputManager.h">
+      <Filter>Manager/Handler Headerfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\public\MemoryManager.h">
+      <Filter>Manager/Handler Headerfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\public\OutputManager.h">
+      <Filter>Manager/Handler Headerfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\public\RuntimeManager.h">
+      <Filter>Manager/Handler Headerfiles</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\InputHandler.cpp">
+      <Filter>Manager/Handler Sourcefiles</Filter>
+    </ClCompile>
+    <ClCompile Include="source\InputManager.cpp">
+      <Filter>Manager/Handler Sourcefiles</Filter>
+    </ClCompile>
+    <ClCompile Include="source\RuntimeManager.cpp">
+      <Filter>Manager/Handler Sourcefiles</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -28,9 +28,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="source\ISentences.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\include\public\BasicEnums.h" />
+    <ClInclude Include="source\include\public\BasicStructs.h" />
     <ClInclude Include="source\include\public\ISentences.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -41,7 +42,7 @@
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
   </PropertyGroup>
