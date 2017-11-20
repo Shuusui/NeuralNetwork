@@ -7,6 +7,7 @@ namespace NeuralNetwork
 	{
 		enum Sentences
 		{
+			None,
 			Demand, 
 			Exclamation, 
 			Optative, 

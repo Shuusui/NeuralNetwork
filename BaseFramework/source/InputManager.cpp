@@ -7,12 +7,12 @@ InputManager::InputManager()
 	m_inputHandler = new InputHandler();
 }
 
-BaseMemory InputManager::SetInput()
+NeuralNetwork::BaseFrameworkLib::BaseMemory InputManager::SetInput()
 {
 	std::string tempStr;
 	std::cin >> tempStr; 
 	m_inputHandler->ReadIn(tempStr);
-	BaseMemory base; 
+	NeuralNetwork::BaseFrameworkLib::BaseMemory base;
 	return base; 
 }
 

@@ -2,15 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="source\main.cpp" />
-    <ClCompile Include="source\Question.cpp">
-      <Filter>Inherit Sourcefiles</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Exclamation.cpp">
-      <Filter>Inherit Sourcefiles</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Statement.cpp">
-      <Filter>Inherit Sourcefiles</Filter>
-    </ClCompile>
     <ClCompile Include="source\InputHandler.cpp">
       <Filter>Manager/Handler Sourcefiles</Filter>
     </ClCompile>
@@ -20,29 +11,11 @@
     <ClCompile Include="source\RuntimeManager.cpp">
       <Filter>Manager/Handler Sourcefiles</Filter>
     </ClCompile>
-    <ClCompile Include="source\MemoryManager.cpp">
-      <Filter>Manager/Handler Sourcefiles</Filter>
-    </ClCompile>
     <ClCompile Include="source\OutputManager.cpp">
       <Filter>Manager/Handler Sourcefiles</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\include\private\Question.h">
-      <Filter>Inherit Headerfiles</Filter>
-    </ClInclude>
-    <ClInclude Include="source\include\private\Statement.h">
-      <Filter>Inherit Headerfiles</Filter>
-    </ClInclude>
-    <ClInclude Include="source\include\private\Demand.h">
-      <Filter>Inherit Headerfiles</Filter>
-    </ClInclude>
-    <ClInclude Include="source\include\private\Optative.h">
-      <Filter>Inherit Headerfiles</Filter>
-    </ClInclude>
-    <ClInclude Include="source\include\private\Exclamation.h">
-      <Filter>Inherit Headerfiles</Filter>
-    </ClInclude>
     <ClInclude Include="source\include\private\InputHandler.h">
       <Filter>Manager/Handler Headerfiles</Filter>
     </ClInclude>
@@ -55,17 +28,8 @@
     <ClInclude Include="source\include\private\RuntimeManager.h">
       <Filter>Manager/Handler Headerfiles</Filter>
     </ClInclude>
-    <ClInclude Include="source\include\private\MemoryManager.h">
-      <Filter>Manager/Handler Headerfiles</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Inherit Headerfiles">
-      <UniqueIdentifier>{24f42852-bc1e-4500-8d07-bba7039f3904}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Inherit Sourcefiles">
-      <UniqueIdentifier>{f101b0c5-eeae-4b94-8e90-fde705e576d2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Manager/Handler Headerfiles">
       <UniqueIdentifier>{2e5965e3-b9aa-4129-a85c-b18ed91c626c}</UniqueIdentifier>
     </Filter>

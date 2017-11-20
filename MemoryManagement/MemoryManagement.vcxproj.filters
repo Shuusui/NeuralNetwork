@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Base Header">
+      <UniqueIdentifier>{a0042e8e-7e88-46cf-b67c-f99fde6e0336}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base Source">
+      <UniqueIdentifier>{8751a564-ffbf-4d9e-8710-78832d4b853f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\include\public\MemoryManager.h">
+      <Filter>Base Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\MemoryManager.cpp">
+      <Filter>Base Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

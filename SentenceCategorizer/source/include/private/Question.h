@@ -1,8 +1,7 @@
 #pragma once
 ///Internal includes
 #pragma region Internal Includes
-#include "ISentences.h"
-#include "MemoryManager.h"
+#include "MemoryManagerAccess.h"
 #pragma endregion Internal Includes
 ///External includes
 #pragma region External Includes
@@ -12,17 +11,14 @@
 
 namespace NeuralNetwork
 {
-	namespace BaseFramework
+	namespace SentenceCategorizer
 	{
-		class Question : public BaseFrameworkLib::ISentences
+		class Question : public MemoryManagerAccess
 		{
 		public:
 			Question(std::vector<std::string> currentQuestion);
-			virtual bool SaveSentence() final;
-			virtual enum NeuralNetwork::BaseFrameworkLib::Sentences GetEnum() final; 
 			~Question();
 		private: 
-			MemoryManager* m_memMng;
 		};
 	}
 }

@@ -20,12 +20,10 @@ namespace NeuralNetwork
 		{
 		public: 
 			InputManager();
-			BaseMemory SetInput();
+			NeuralNetwork::BaseFrameworkLib::BaseMemory SetInput();
 			~InputManager();
 		private: 
 			InputHandler* m_inputHandler; 
 		};
-
-
 	}
 }

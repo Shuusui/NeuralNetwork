@@ -15,7 +15,16 @@ void RuntimeManager::Run()
 {
 	while (true)
 	{
-		BaseMemory currMem = m_inputMgr->SetInput();
+		std::string tempStr = ("/MemoryFiles/Demands/hasdikasj.txt");
+		std::fstream file(tempStr.c_str(), std::ios::out);
+		if (file)
+		{
+
+		}
+		file.write(tempStr.c_str(),tempStr.size());
+		file.close();
+
+		NeuralNetwork::BaseFrameworkLib::BaseMemory currMem = m_inputMgr->SetInput();
 		if (currMem.m_isFilled)
 			m_outputMgr = new OutputManager(currMem);
 		else

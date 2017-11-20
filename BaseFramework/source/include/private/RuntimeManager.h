@@ -8,6 +8,7 @@
 ///External includes
 #pragma region External Includes
 #include <string>
+#include <fstream>
 #pragma region External Includes
 
 

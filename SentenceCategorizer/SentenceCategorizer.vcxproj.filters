@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Inherit Headerfiles">
+      <UniqueIdentifier>{81dc7b4f-bd78-492d-b9db-1b32042ba881}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inherit Sourcefiles">
+      <UniqueIdentifier>{e5a66586-d32a-4cd4-8f82-80459fc9607c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base Header">
+      <UniqueIdentifier>{a8acc75b-2153-4bdc-85cd-f4e9b2cd8b9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseSource">
+      <UniqueIdentifier>{762bb279-a5ef-400b-b333-62f0dfd4e97f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Categorizer Header">
+      <UniqueIdentifier>{ba046cf2-e340-45a5-9406-c5301cb3bd61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Categorizer Source">
+      <UniqueIdentifier>{24a669b9-cbb7-455a-940b-e3fca2b2ffd7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\include\private\Demand.h">
+      <Filter>Inherit Headerfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\private\Exclamation.h">
+      <Filter>Inherit Headerfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\private\Optative.h">
+      <Filter>Inherit Headerfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\private\Question.h">
+      <Filter>Inherit Headerfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\private\Statement.h">
+      <Filter>Inherit Headerfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\public\BaseAPI.h">
+      <Filter>Base Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\private\MemoryManagerAccess.h">
+      <Filter>Inherit Headerfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\private\Categorizer.h">
+      <Filter>Categorizer Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Demand.cpp">
+      <Filter>Inherit Sourcefiles</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Exclamation.cpp">
+      <Filter>Inherit Sourcefiles</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Optative.cpp">
+      <Filter>Inherit Sourcefiles</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Question.cpp">
+      <Filter>Inherit Sourcefiles</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Statement.cpp">
+      <Filter>Inherit Sourcefiles</Filter>
+    </ClCompile>
+    <ClCompile Include="source\BaseAPI.cpp">
+      <Filter>BaseSource</Filter>
+    </ClCompile>
+    <ClCompile Include="source\MemoryManagerAccess.cpp">
+      <Filter>Inherit Sourcefiles</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Categorizer.cpp">
+      <Filter>Categorizer Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
