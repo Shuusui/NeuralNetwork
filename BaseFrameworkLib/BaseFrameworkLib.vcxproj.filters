@@ -7,6 +7,12 @@
     <Filter Include="Source">
       <UniqueIdentifier>{5b53a1aa-9782-4438-806f-157b3c106ac3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Interface Sourcefiles">
+      <UniqueIdentifier>{75ce2591-2c87-4322-9f32-9ab62ab1fe1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseFiles">
+      <UniqueIdentifier>{342b2a35-4627-4dbd-bb9f-37369af589df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -16,6 +22,12 @@
   <ItemGroup>
     <ClInclude Include="source\include\public\ISentences.h">
       <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\public\BasicEnums.h">
+      <Filter>BaseFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="source\include\public\BasicStructs.h">
+      <Filter>BaseFiles</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

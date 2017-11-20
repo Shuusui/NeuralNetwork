@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BaseFramework", "BaseFramework\BaseFramework.vcxproj", "{23232642-C987-4206-AB89-F9721334589B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9335B93D-02EF-4D7F-BE2F-47EA53680590} = {9335B93D-02EF-4D7F-BE2F-47EA53680590}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BaseFrameworkLib", "BaseFrameworkLib\BaseFrameworkLib.vcxproj", "{9335B93D-02EF-4D7F-BE2F-47EA53680590}"
 EndProject

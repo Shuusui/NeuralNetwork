@@ -16,7 +16,8 @@ namespace NeuralNetwork
 		class Optative : BaseFrameworkLib::ISentences
 		{
 		public: 
-
+			virtual bool SaveSentence() final;
+			virtual ~Optative();
 		private: 
 
 		};

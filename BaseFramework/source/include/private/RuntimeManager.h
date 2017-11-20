@@ -2,11 +2,12 @@
 
 ///Internal includes
 #pragma region Internal Includes
-
+#include "OutputManager.h"
+#include "InputManager.h"
 #pragma endregion Internal Includes
 ///External includes
 #pragma region External Includes
-#include <cstring>
+#include <string>
 #pragma region External Includes
 
 
@@ -24,10 +25,13 @@ namespace NeuralNetwork
 		class RuntimeManager
 		{
 		public:
-			RuntimeManager(); 
+			RuntimeManager(std::string initialOutput);			
+			void Finish(); 
 			~RuntimeManager();
 		private: 
-
+			void Run(); 
+			InputManager* m_inputMgr;
+			OutputManager* m_outputMgr;
 		};
 	}
 }

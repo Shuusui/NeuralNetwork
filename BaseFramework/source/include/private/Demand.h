@@ -7,7 +7,8 @@
 ///External includes
 #pragma region External Includes
 #include <string>
-#pragma region External Includes
+#include <vector>
+#pragma endregion External Includes
 
 
 namespace NeuralNetwork
@@ -17,9 +18,9 @@ namespace NeuralNetwork
 		class Demand : public BaseFrameworkLib::ISentences
 		{
 		public:
-
+			virtual bool SaveSentence() final; 
+			virtual ~Demand();
 		private:
-
 		};
 	}
 }
