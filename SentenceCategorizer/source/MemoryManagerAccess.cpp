@@ -6,6 +6,12 @@ MemoryManagerAccess::MemoryManagerAccess(std::vector<std::string> currentString)
 	:ISentences(currentString)
 {
 	m_memMng = new NeuralNetwork::MemoryManagement::MemoryManager();
+	m_saveSuccessful = SaveSentence();
+}
+
+bool MemoryManagerAccess::Successful()
+{
+	return m_saveSuccessful; 
 }
 
 bool MemoryManagerAccess::SaveSentence()

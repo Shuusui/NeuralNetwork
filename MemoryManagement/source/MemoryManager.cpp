@@ -7,7 +7,7 @@ MemoryManager::MemoryManager()
 
 }
 
-bool MemoryManager::SetSentence(NeuralNetwork::BaseFrameworkLib::BaseSentence baseSentence)
+bool MemoryManager::SetSentence(const NeuralNetwork::BaseFrameworkLib::BaseSentence  baseSentence)
 {
 	std::string formattedString;
 	for (unsigned int i = 0; i < baseSentence.m_string.size(); i++)
@@ -18,7 +18,15 @@ bool MemoryManager::SetSentence(NeuralNetwork::BaseFrameworkLib::BaseSentence ba
 	{
 	case NeuralNetwork::BaseFrameworkLib::Sentences::Demand:
 	{
-		std::fstream file("...\MemoryFiles\\Demands\\" + formattedString, std::ios::out);
+		if (CreateDirectoryA("Memories\/Demands", NULL))
+		{
+			std::string tempStr = ("Memories\/Demands\/"); 
+			tempStr.append(formattedString);
+			std::ifstream currentFile = TryToOpenFile(tempStr);
+			if(!currentFile)
+				currentFile.open(tempStr.c_str(), std::ios::out);
+		}
+
 		return true;
 	}
 		break;
@@ -46,6 +54,22 @@ bool MemoryManager::SetSentence(NeuralNetwork::BaseFrameworkLib::BaseSentence ba
 	return false;
 }
 
+std::ifstream MemoryManager::TryToOpenFile(const std::string filePath)
+{
+	std::ifstream fileHandle; 
+	fileHandle.open(filePath.c_str(), std::ios::in | std::ios::out | std::ios::app);
+	return fileHandle; 
+}
+
+std::vector<std::string> MemoryManager::SearchTroughFile(std::ifstream currentFile)
+{
+	
+}
+
+bool MemoryManager::SaveSentence(std::ifstream currentFile, NeuralNetwork::BaseFrameworkLib::BaseSentence currentSentence)
+{
+	
+}
 
 MemoryManager::~MemoryManager()
 {

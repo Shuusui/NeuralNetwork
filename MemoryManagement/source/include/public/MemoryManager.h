@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <Windows.h>
 #pragma endregion External Includes
 
 
@@ -20,9 +21,12 @@ namespace NeuralNetwork
 		{
 		public:
 			MemoryManager(); 
-			bool SetSentence(NeuralNetwork::BaseFrameworkLib::BaseSentence baseSentence);
+			bool SetSentence(const NeuralNetwork::BaseFrameworkLib::BaseSentence baseSentence);
 			~MemoryManager();
 		private: 
+			std::ifstream TryToOpenFile(const std::string filepath);
+			std::vector<std::string> SearchTroughFile(std::ifstream currentFile); 
+			bool SaveSentence(std::ifstream currentFile, NeuralNetwork::BaseFrameworkLib::BaseSentence currentSentence); 
 		};
 	}
 }

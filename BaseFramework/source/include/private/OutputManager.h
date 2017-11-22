@@ -16,10 +16,10 @@ namespace NeuralNetwork
 		class OutputManager
 		{
 		public: 
-			OutputManager(NeuralNetwork::BaseFrameworkLib::BaseMemory memoryFrag); 
+			OutputManager(); 
 			~OutputManager();
 		private: 
-			NeuralNetwork::BaseFrameworkLib::BaseMemory m_currMem;
+
 		};
 	}
 }

@@ -25,13 +25,18 @@ namespace NeuralNetwork
 			enum Sentences m_sentenceType; 
 			std::vector<std::string> m_string; 
 			NeuralNetwork::BaseFrameworkLib::ISentences* m_sentence;
-			BaseSentence() : m_sentenceType(Sentences::None), m_string(0), m_sentence(nullptr) {};
+			MemoryToSave* m_memoryToSave; 
+			BaseSentence() : m_sentenceType(Sentences::None), m_string(0), m_sentence(nullptr), m_memoryToSave(nullptr) {};
 			~BaseSentence()
 			{
 				delete m_sentence;
+				delete m_memoryToSave; 
 			}
 		};
-
+		struct MemoryToSave
+		{
+			//TODO: Find out how to save a fragment of Memory of a sentence 
+		};
 
 	}
 }
