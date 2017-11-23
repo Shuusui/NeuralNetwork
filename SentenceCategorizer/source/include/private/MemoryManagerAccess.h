@@ -19,7 +19,7 @@ namespace NeuralNetwork
 		public:
 			MemoryManagerAccess(std::vector<std::string> currentString);
 			virtual ~MemoryManagerAccess();
-			bool Successful(); 
+			virtual bool Successful() final; 
 		private:
 			virtual bool SaveSentence() final;
 			NeuralNetwork::MemoryManagement::MemoryManager* m_memMng;

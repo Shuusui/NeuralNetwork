@@ -2,6 +2,7 @@
 ///Internal includes
 #pragma region Internal Includes
 #include "ISentences.h"
+#include "BaseAPI.h"
 #pragma endregion Internal Includes
 ///External includes
 #pragma region External Includes
@@ -17,11 +18,11 @@ namespace NeuralNetwork
 		{
 		public: 
 			InputHandler();
-			bool ReadIn(std::string currentString); 
+			bool ReadIn(const std::string currentString); 
 			~InputHandler();
 		private: 
-			//NeuralNetwork::BaseFrameworkLib::ISentences* CategorizeSentence(std::vector<std::string> currentString);
 			std::vector<std::string> m_stringBuffer;
+			NeuralNetwork::SentenceCategorizer::BaseAPI* m_sentenceCategorizer; 
 
 		};
 

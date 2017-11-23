@@ -1,4 +1,4 @@
-#include "Categorizer.h"
+#include "private\Categorizer.h"
 
 
 using namespace NeuralNetwork::SentenceCategorizer; 

@@ -7,15 +7,14 @@ InputHandler::InputHandler()
 {
 }
 
-bool InputHandler::ReadIn(std::string currentString)
+bool InputHandler::ReadIn(const std::string currentString)
 {
 	m_stringBuffer.push_back(currentString);
 
 	if (currentString[currentString.size()] == '?' || currentString[currentString.size()] == '!' || currentString[currentString.size()] == '.')
 	{
-		//NeuralNetwork::BaseFrameworkLib::ISentences* currentSentence = CategorizeSentence(m_stringBuffer);
-		//return currentSentence->SaveSentence() ?  true :  false;
-		return true;
+		m_sentenceCategorizer = new NeuralNetwork::SentenceCategorizer::BaseAPI(m_stringBuffer);
+		return m_sentenceCategorizer->GetSentence()->Successful() ? true : false; 
 	}
 	else
 		return false; 

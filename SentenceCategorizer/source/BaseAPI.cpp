@@ -24,7 +24,7 @@ std::vector<std::string> BaseAPI::GetString()
 std::string BaseAPI::GetFormattedString()
 {
 	std::string tempString; 
-	for (int i = 0; i < m_currentString.size(); i++)
+	for (unsigned int i = 0; i < m_currentString.size(); i++)
 	{
 		tempString.append(m_currentString.at(i));
 	}

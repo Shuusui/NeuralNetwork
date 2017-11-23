@@ -20,6 +20,10 @@ namespace NeuralNetwork
 			enum Sentences m_sentenceType; 
 			std::string m_keyword; 
 		};
+		struct MemoryToSave
+		{
+			//TODO: Find out how to save a fragment of Memory of a sentence 
+		};
 		struct BaseSentence
 		{
 			enum Sentences m_sentenceType; 
@@ -32,10 +36,6 @@ namespace NeuralNetwork
 				delete m_sentence;
 				delete m_memoryToSave; 
 			}
-		};
-		struct MemoryToSave
-		{
-			//TODO: Find out how to save a fragment of Memory of a sentence 
 		};
 
 	}

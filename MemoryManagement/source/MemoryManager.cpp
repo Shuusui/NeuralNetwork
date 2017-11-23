@@ -63,12 +63,13 @@ std::ifstream MemoryManager::TryToOpenFile(const std::string filePath)
 
 std::vector<std::string> MemoryManager::SearchTroughFile(std::ifstream currentFile)
 {
-	
+	std::vector<std::string> tempStr; 
+	return tempStr; 
 }
 
 bool MemoryManager::SaveSentence(std::ifstream currentFile, NeuralNetwork::BaseFrameworkLib::BaseSentence currentSentence)
 {
-	
+	return true; 
 }
 
 MemoryManager::~MemoryManager()

@@ -2,12 +2,7 @@
 ///Internal includes
 #pragma region Internal Includes
 #include "ISentences.h"
-#include "Demand.h"
-#include "Question.h"
-#include "Exclamation.h"
-#include "Optative.h"
-#include "Statement.h"
-#include "Categorizer.h"
+#include "private\Categorizer.h"
 #pragma endregion Internal Includes
 ///External includes
 #pragma region External Includes

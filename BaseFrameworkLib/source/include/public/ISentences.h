@@ -20,9 +20,10 @@ namespace NeuralNetwork
 		{
 		public: 	
 			ISentences(std::vector<std::string> currentString) : m_currentString(currentString){ }
-			virtual bool SaveSentence() = 0;
 			enum Sentences GetEnum();
+			virtual bool Successful() = 0; 
 		protected: 
+			virtual bool SaveSentence() = 0;
 			std::vector<std::string> m_currentString; 		
 			enum Sentences m_sentenceType; 
 		};

@@ -18,7 +18,8 @@ void RuntimeManager::Run()
 		
 		if (!m_inputMgr->SetInput())
 			printf("Please repeat");
-
+		else
+			continue; 
 	}
 }
 
