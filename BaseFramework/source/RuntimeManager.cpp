@@ -15,7 +15,6 @@ void RuntimeManager::Run()
 {
 	while (true)
 	{
-		
 		if (!m_inputMgr->SetInput())
 			printf("Please repeat");
 		else

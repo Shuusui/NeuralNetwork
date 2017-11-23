@@ -22,8 +22,8 @@ namespace NeuralNetwork
 		class Categorizer
 		{
 		public: 
-			Categorizer(std::vector<std::string> currentSentence); 
-			void SetNewSentence(std::vector<std::string> currentString);
+			Categorizer(const std::vector<std::string> currentSentence); 
+			void SetNewSentence(const std::vector<std::string> currentString);
 			NeuralNetwork::BaseFrameworkLib::ISentences* GetSentence();
 		private: 
 			NeuralNetwork::BaseFrameworkLib::ISentences* CategorizeSentence();

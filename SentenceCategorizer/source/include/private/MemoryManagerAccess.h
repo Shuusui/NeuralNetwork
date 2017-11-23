@@ -10,6 +10,14 @@
 #include <string>
 #pragma region External Includes
 
+///
+///
+///Class which inherits from ISentences to get access to the MemoryManagerclass for all sentencetypes and override the SaveSentence and Successful class
+///
+///
+
+
+
 namespace NeuralNetwork
 {
 	namespace SentenceCategorizer
@@ -17,7 +25,7 @@ namespace NeuralNetwork
 		class MemoryManagerAccess :public NeuralNetwork::BaseFrameworkLib::ISentences
 		{
 		public:
-			MemoryManagerAccess(std::vector<std::string> currentString);
+			MemoryManagerAccess(const std::vector<std::string> currentString);
 			virtual ~MemoryManagerAccess();
 			virtual bool Successful() final; 
 		private:

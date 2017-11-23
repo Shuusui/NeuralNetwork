@@ -2,7 +2,7 @@
 ///Internal includes
 #pragma region Internal Includes
 #include "ISentences.h"
-#include "private\Categorizer.h"
+#include "Categorizer.h"
 #pragma endregion Internal Includes
 ///External includes
 #pragma region External Includes
@@ -18,7 +18,7 @@ namespace NeuralNetwork
 		class BaseAPI
 		{
 		public:
-			BaseAPI(std::vector<std::string> currentSentence); 
+			BaseAPI(const std::vector<std::string> currentSentence); 
 			NeuralNetwork::BaseFrameworkLib::ISentences* GetSentence();
 			NeuralNetwork::BaseFrameworkLib::Sentences GetSentenceType(); 
 			std::vector<std::string> GetString();

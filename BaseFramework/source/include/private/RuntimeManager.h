@@ -26,7 +26,7 @@ namespace NeuralNetwork
 		class RuntimeManager
 		{
 		public:
-			RuntimeManager(std::string initialOutput);			
+			RuntimeManager(const std::string initialOutput);			
 			void Finish(); 
 			~RuntimeManager();
 		private: 

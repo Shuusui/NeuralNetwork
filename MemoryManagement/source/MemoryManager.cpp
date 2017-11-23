@@ -14,20 +14,29 @@ bool MemoryManager::SetSentence(const NeuralNetwork::BaseFrameworkLib::BaseSente
 	{
 		formattedString.append(baseSentence.m_string.at(i).c_str());
 	}
-	switch (baseSentence.m_sentenceType)
+	NeuralNetwork::BaseFrameworkLib::BaseSentence base;
+	base.m_sentenceType = NeuralNetwork::BaseFrameworkLib::Sentences::Demand; 
+	TCHAR NPath[256];
+	GetCurrentDirectory(256, NPath);
+	std::string  s = NPath;
+	s.append("\\Memories");
+	CreateDirectory(s.c_str(), NULL);
+	switch (base.m_sentenceType)
 	{
 	case NeuralNetwork::BaseFrameworkLib::Sentences::Demand:
 	{
-		if (CreateDirectoryA("Memories\/Demands", NULL))
+
+		if (CreateDirectory("Memories\\Demands", NULL))
 		{
-			std::string tempStr = ("Memories\/Demands\/"); 
+			std::string tempStr = ("Memories\\Demands\\"); 
 			tempStr.append(formattedString);
 			std::ifstream currentFile = TryToOpenFile(tempStr);
 			if(!currentFile)
 				currentFile.open(tempStr.c_str(), std::ios::out);
+			return true;
+
 		}
 
-		return true;
 	}
 		break;
 	case NeuralNetwork::BaseFrameworkLib::Sentences::Question:

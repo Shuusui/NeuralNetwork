@@ -19,7 +19,7 @@ namespace NeuralNetwork
 		class ISentences
 		{
 		public: 	
-			ISentences(std::vector<std::string> currentString) : m_currentString(currentString){ }
+			ISentences(const std::vector<std::string> currentString) : m_currentString(currentString){ }
 			enum Sentences GetEnum();
 			virtual bool Successful() = 0; 
 		protected: 
