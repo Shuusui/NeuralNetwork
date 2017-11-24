@@ -18,25 +18,19 @@ bool MemoryManager::SetSentence(const NeuralNetwork::BaseFrameworkLib::BaseSente
 	base.m_sentenceType = NeuralNetwork::BaseFrameworkLib::Sentences::Demand; 
 	TCHAR NPath[256];
 	GetCurrentDirectory(256, NPath);
-	std::string  s = NPath;
-	s.append("\\Memories");
-	CreateDirectory(s.c_str(), NULL);
+	m_currentDirectoryPath = NPath;
+	std::string tempPath = m_currentDirectoryPath.append("\\Memories");
+	CreateDirectory(tempPath.c_str(), NULL);
 	switch (base.m_sentenceType)
 	{
 	case NeuralNetwork::BaseFrameworkLib::Sentences::Demand:
 	{
 
-		if (CreateDirectory("Memories\\Demands", NULL))
-		{
-			std::string tempStr = ("Memories\\Demands\\"); 
-			tempStr.append(formattedString);
-			std::ifstream currentFile = TryToOpenFile(tempStr);
-			if(!currentFile)
-				currentFile.open(tempStr.c_str(), std::ios::out);
-			return true;
-
-		}
-
+		CreateDirectory(tempPath.append("\\Demands\\").c_str(), NULL);
+		tempPath.append(formattedString + ".txt");
+		std::ifstream currentFile = TryToOpenFile(tempPath);
+		currentFile.close();
+		return true;
 	}
 		break;
 	case NeuralNetwork::BaseFrameworkLib::Sentences::Question:

@@ -27,6 +27,7 @@ namespace NeuralNetwork
 			std::ifstream TryToOpenFile(const std::string filepath);
 			std::vector<std::string> SearchTroughFile(std::ifstream currentFile); 
 			bool SaveSentence(std::ifstream currentFile, NeuralNetwork::BaseFrameworkLib::BaseSentence currentSentence); 
+			std::string m_currentDirectoryPath; 
 		};
 	}
 }

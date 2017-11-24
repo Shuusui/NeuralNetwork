@@ -25,5 +25,6 @@ NeuralNetwork::BaseFrameworkLib::ISentences* Categorizer::GetSentence()
 NeuralNetwork::BaseFrameworkLib::ISentences* Categorizer::CategorizeSentence()
 {
 	NeuralNetwork::BaseFrameworkLib::ISentences* tempSentences = new Demand(m_baseSentence.m_string);
+	int i = wninit();
 	return tempSentences; 
 }

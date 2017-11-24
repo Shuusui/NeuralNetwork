@@ -8,6 +8,7 @@
 #include "Optative.h"
 #include "Statement.h"
 #include "BasicStructs.h"
+#include "wn.h"
 #pragma endregion Internal Includes
 ///External includes
 #pragma region External Includes
@@ -28,6 +29,7 @@ namespace NeuralNetwork
 		private: 
 			NeuralNetwork::BaseFrameworkLib::ISentences* CategorizeSentence();
 			NeuralNetwork::BaseFrameworkLib::BaseSentence m_baseSentence; 
+			
 		};
 	}
 }
