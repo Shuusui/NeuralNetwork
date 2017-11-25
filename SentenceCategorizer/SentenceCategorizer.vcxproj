@@ -111,6 +111,8 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)\dependencies\Wordnet\src\include;$(SolutionDir)\SentenceCategorizer\source\include\private;$(SolutionDir)\MemoryManagement\source\include\public;$(SolutionDir)\BaseFrameworkLib\source\include\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ErrorReporting>Prompt</ErrorReporting>
+      <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)\bin\$(Confifuration)\$(Platform)\</AdditionalLibraryDirectories>
@@ -149,6 +151,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)\dependencies\Wordnet\src\include;$(SolutionDir)\SentenceCategorizer\source\include\private;$(SolutionDir)\MemoryManagement\source\include\public;$(SolutionDir)\BaseFrameworkLib\source\include\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ErrorReporting>Prompt</ErrorReporting>
+      <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
