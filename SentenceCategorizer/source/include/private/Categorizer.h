@@ -11,7 +11,6 @@
 #pragma endregion Internal Includes
 ///External includes
 #pragma region External Includes
-#include "wn.h"
 #include <string>
 #include <vector>
 #pragma endregion External Includes

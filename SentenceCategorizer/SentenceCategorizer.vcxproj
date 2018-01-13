@@ -113,6 +113,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)\dependencies\Wordnet\src\include;$(SolutionDir)\SentenceCategorizer\source\include\private;$(SolutionDir)\MemoryManagement\source\include\public;$(SolutionDir)\BaseFrameworkLib\source\include\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ErrorReporting>Prompt</ErrorReporting>
       <CompileAs>Default</CompileAs>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)\bin\$(Confifuration)\$(Platform)\</AdditionalLibraryDirectories>
@@ -123,6 +124,7 @@
     </Lib>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)\dependencies\Wordnet\lib;</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -141,6 +143,8 @@
     </Lib>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)\dependencies\Wordnet\lib;</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -153,6 +157,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)\dependencies\Wordnet\src\include;$(SolutionDir)\SentenceCategorizer\source\include\private;$(SolutionDir)\MemoryManagement\source\include\public;$(SolutionDir)\BaseFrameworkLib\source\include\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ErrorReporting>Prompt</ErrorReporting>
       <CompileAs>Default</CompileAs>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -165,6 +170,7 @@
     </Lib>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)\dependencies\Wordnet\lib;</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -187,6 +193,8 @@
     </Lib>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)\dependencies\Wordnet\lib;</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
     </Lib>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
